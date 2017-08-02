@@ -19,6 +19,8 @@ Things to consider when using this file
 5. This assumes a TAC gain of 4 and a Range of 50 ns on the TCSPC software
 6. This program assumes the first 20 data points are good enough to zero the baseline 
 7. The fits don't seem overly dependent on the intial guesses used 
+8. The spectra have no background subtraction
+9. The fits do not account for the IRF
 
 '''
 
