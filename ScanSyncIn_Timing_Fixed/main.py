@@ -73,22 +73,22 @@ ADCres  = np.shape(data)[3]
 TimeArray = TimeArray.TimeArray(ADCres)
 WavelengthArray = WavelengthArray.WavelengthArray(GratPos)
 if PlotSpectra == True:
-    print 'Making Spectrum Plot'
+    print('Making Spectrum Plot')
     SpectraPlot.SpectraPlot(data,WavelengthArray,label)
 if TryMonoFit == True:
-    print 'Doing Mono-Fits'
+    print('Doing Mono-Fits')
     for idx in range(0,np.shape(PMTarray)[0]):
         MonoExpFit.MonoExpFit(data,PMTarray[idx][0],PMTarray[idx][1],MonoTime,TimeArray,label)
 if TryBiFit == True:
-    print 'Doing Bi-Fits'
+    print('Doing Bi-Fits')
     for idx in range(0,np.shape(PMTarray)[0]):
         BiExpFit.BiExpFit(data,PMTarray[idx][0],PMTarray[idx][1],BiShort,BiLong,TimeArray,label)
 if TryTriFit == True:
-    print 'Doing Tri-Fits'
+    print('Doing Tri-Fits')
     for idx in range(0,np.shape(PMTarray)[0]):
         TriExpFit.TriExpFit(data,PMTarray[idx][0],PMTarray[idx][1],TriShort,TriMed,TriLong,TimeArray,label)
 if PlotLog == True:
-    print 'Making Log Plots'
+    print('Making Log Plots')
     for idx in range(0,np.shape(PMTarray)[0]):
         LogPlots.LogPlots(data,PMTarray[idx][0],PMTarray[idx][1],TimeArray,label)
 
