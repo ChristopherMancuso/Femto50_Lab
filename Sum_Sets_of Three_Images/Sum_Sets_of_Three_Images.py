@@ -7,6 +7,7 @@ Must be careful of the naming. If over 100 scans need to order like Scan001, Sca
 The files to be summed over need to be placed in the data folder and the final summed images will be in the summed_images folder.
 
 '''
+print('This program has started')
 
 FileNames =  glob.glob('data/*.npy')
 
