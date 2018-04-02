@@ -4,12 +4,12 @@ import numpy as np
 
 This program assumes you do three grating positions and for each grating position there are three separate files to be summed together.
 Must be careful of the naming. If over 100 scans need to order like Scan001, Scan010 and Scan100 for python to read files in the correct order.
-The files to be summed over need to be placed in the data folder and the final summed images will be in the summed_images folder.
+The files to be summed over need to be placed in the data folder and the final summed images will be in the summed_images folder. The files are sorted using sorted function before being read.
 
 '''
 print('This program has started')
 
-FileNames =  glob.glob('data/*.npy')
+FileNames =  sorted(glob.glob('data/*.npy'))
 
 
 # the max range is how many sets, it is way more than needed so the program probably will end in an error but it is OK
